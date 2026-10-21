@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Top Sport</title>
+<title>MEX Sports Wear</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,7 +18,7 @@
     <div class="login-logo-bg" id="login-logo-inner">⚽</div>
     <div class="login-badge">✓</div>
   </div>
-  <div class="login-brand" id="login-brand-name">Top<span>Sport</span></div>
+  <div class="login-brand" id="login-brand-name">MEX<span>Sports Wear</span></div>
   <div class="login-tagline" id="login-tagline">Premium Football Kits &amp; Sportswear</div>
   <div class="login-loading" id="login-loading">
     <div class="login-spinner"></div>
@@ -42,10 +42,10 @@
     <div class="notg-desc">This app works inside the Telegram app only.</div>
     <div class="notg-steps">
       <div class="notg-step"><div class="notg-num">1</div><div class="notg-step-text">Open <b>Telegram</b> on your phone</div></div>
-      <div class="notg-step"><div class="notg-num">2</div><div class="notg-step-text">Search for <b>@TopSportBot</b></div></div>
+      <div class="notg-step"><div class="notg-num">2</div><div class="notg-step-text">Search for <b>@MexSportsWearBot</b></div></div>
       <div class="notg-step"><div class="notg-num">3</div><div class="notg-step-text">Tap <b>Start</b> then <b>🛍 Shop Now</b></div></div>
     </div>
-    <button class="notg-open-btn" onclick="window.open('https://t.me/TopSportBot','_blank')">
+    <button class="notg-open-btn" onclick="window.open('https://t.me/MexSportsWearBot','_blank')">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.026 9.54c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.889.681z"/></svg>
       Open in Telegram
     </button>
@@ -59,7 +59,7 @@
 <div class="hdr" id="main-hdr">
   <div class="logo" onclick="goShop()">
     <div id="hdr-logo-img" class="logo-emoji">⚽</div>
-    <div><div class="logo-name" id="hdr-brand-name">Top<span>Sport</span></div><div class="logo-sub" id="hdr-brand-sub">Premium Kits</div></div>
+    <div><div class="logo-name" id="hdr-brand-name">MEX<span>Sports Wear</span></div><div class="logo-sub" id="hdr-brand-sub">Premium Kits</div></div>
   </div>
   <div class="hdr-right">
     <div class="hdr-btn" id="admin-hdr-btn" onclick="showAdminDirect()" style="display:none">⚙️</div>
@@ -282,9 +282,9 @@
         <div class="padm-panel" id="padm-panel-2" style="padding:12px">
           <div style="font-size:11px;color:var(--gray);margin-bottom:14px;line-height:1.5">Set your payment account numbers. Customers will see these when they choose a payment method.</div>
           <div class="adm-field"><label>CBE Birr Account Number</label><input id="padm-cbe-num" type="text" placeholder="1000123456789"></div>
-          <div class="adm-field"><label>CBE Account Name</label><input id="padm-cbe-name" type="text" placeholder="Top Sport"></div>
+          <div class="adm-field"><label>CBE Account Name</label><input id="padm-cbe-name" type="text" placeholder="MEX Sports Wear"></div>
           <div class="adm-field" style="margin-top:14px"><label>Telebirr Number</label><input id="padm-telebirr-num" type="text" placeholder="+251 9XX XXX XXX"></div>
-          <div class="adm-field"><label>Telebirr Account Name</label><input id="padm-telebirr-name" type="text" placeholder="Top Sport"></div>
+          <div class="adm-field"><label>Telebirr Account Name</label><input id="padm-telebirr-name" type="text" placeholder="MEX Sports Wear"></div>
           <button class="btn-save" onclick="padmSavePayment()" style="width:100%;margin-top:4px">Save Payment Info</button>
         </div>
         <div class="padm-panel" id="padm-panel-3" style="padding:12px">
@@ -317,7 +317,7 @@
             <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Quick Presets</div>
             <div style="display:flex;flex-wrap:wrap;gap:7px">
               <button onclick="applyPreset('dark')"    style="background:#111;border:1px solid #333;color:#fff;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚫ Dark</button>
-              <button onclick="applyPreset('topsport')" style="background:#111;border:1px solid #e0b83c;color:#e0b83c;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">🏆 Top Sport</button>
+              <button onclick="applyPreset('mex')" style="background:#111;border:1px solid #e3101b;color:#e3101b;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚽ MEX</button>
               <button onclick="applyPreset('legacy')"  style="background:#080d1a;border:1px solid #1a56db;color:#1a56db;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚡ Legacy</button>
               <button onclick="applyPreset('fire')"    style="background:#0d0500;border:1px solid #f97316;color:#f97316;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">🔥 Fire</button>
               <button onclick="applyPreset('emerald')" style="background:#021a0e;border:1px solid #10b981;color:#10b981;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">💚 Emerald</button>
@@ -478,15 +478,15 @@ const OWNER_IDS = ["5158823198"];
 // ═══════════════════════════════════════════
 const DEFAULT_CONFIG = {
   pin:"1234",ownerTelegramId:"",adminIds:[],ownerNotifyId:"5158823198",
-  brandName1:"Top",brandName2:"Sport",logoUrl:"logo.jpg",logoEmoji:"🛡️",
-  storeName:"Top Sport",storeSub:"Premium Football Kits & Sportswear",
-  phone:"+251 911 234 567",email:"info@topsport.com",
+  brandName1:"MEX",brandName2:"Sports Wear",logoUrl:"logo.jpg",logoEmoji:"⚽",
+  storeName:"MEX Sports Wear",storeSub:"Premium Football Kits & Sportswear",
+  phone:"+251 911 234 567",email:"info@mexsportswear.com",
   address:"Bole Road, Near Edna Mall, Addis Ababa",hours:"Mon–Sat 9AM–7PM",
   about:"Ethiopia's premier destination for authentic football kits. Official jerseys from Premier League, La Liga, Bundesliga, Ligue 1, Serie A, Champions League and National Teams.",
   currency:"ETB",currencyPos:"before",
-  payment:{ cbeNum:"1000123456789", cbeName:"Top Sport", telebirrNum:"+251 911 234 567", telebirrName:"Top Sport" },
+  payment:{ cbeNum:"1000123456789", cbeName:"MEX Sports Wear", telebirrNum:"+251 911 234 567", telebirrName:"MEX Sports Wear" },
   hero:{tag:"⚡ New Season 2024/25",h1a:"Official",h1b:"Football Jerseys",sub:"Authentic kits from top leagues worldwide",imgUrl:""},
-  theme:{"--accent":"#e0b83c","--bg":"#141414","--card":"#1e1e1e","--dark":"#0d0d0d","--white":"#ffffff","--border":"#2c2c2c","--accent2":"#d8d8d8"},
+  theme:{"--accent":"#e3101b","--bg":"#140607","--card":"#220b0d","--dark":"#0c0405","--white":"#ffffff","--border":"#3a1519","--accent2":"#ffffff"},
   sizes:["XS","S","M","L","XL","XXL"],
   customFee:150,
   deletedProductIds:[],
@@ -985,7 +985,7 @@ function applyRemoteConfig(remote){
   cfg.brandName2=DEFAULT_CONFIG.brandName2;
   cfg.storeName=DEFAULT_CONFIG.storeName;
   cfg.storeSub=DEFAULT_CONFIG.storeSub;
-  localStorage.setItem('topsport_cfg',JSON.stringify(cfg));
+  localStorage.setItem('mex_cfg',JSON.stringify(cfg));
   applyTheme(); renderHeader(); renderHero(); renderLeagueTabs(); renderShopGrid(); updateBreadcrumb(); updateShopTitle();
 }
 
@@ -1048,7 +1048,7 @@ function updateSyncStatusPanel(){
   else { el.innerHTML=`<span style="color:#ffffff;font-weight:700">⚠️ Pushing requires Telegram</span><br>You're viewing this outside Telegram, so identity can't be verified — reading still works, but pushing changes needs the real Telegram app.`; }
 }
 
-let savedCfg=JSON.parse(localStorage.getItem('topsport_cfg')||'null');
+let savedCfg=JSON.parse(localStorage.getItem('mex_cfg')||'null');
 let cfg;
 if(savedCfg){
   cfg=Object.assign({},DEFAULT_CONFIG,savedCfg);
@@ -1067,7 +1067,7 @@ cfg.storeSub=DEFAULT_CONFIG.storeSub;
 // NOW safe to read cfg._lastUpdated since cfg is initialized above
 _lastKnownRemoteTs=cfg._lastUpdated||0;
 
-function cartKey(){ return tgUser ? 'topsport_cart_'+String(tgUser.id) : null; }
+function cartKey(){ return tgUser ? 'mex_cart_'+String(tgUser.id) : null; }
 function loadCart(){ const k=cartKey(); if(!k) return; try{ const saved=localStorage.getItem(k); if(saved) cart=JSON.parse(saved); } catch(e){ cart=[]; } updateBadge(); }
 function saveCart(){ const k=cartKey(); if(!k) return; localStorage.setItem(k,JSON.stringify(cart)); pushCartSnapshot(); }
 
@@ -1089,8 +1089,8 @@ function pushCartSnapshot(){
   },1500); // debounce so rapid qty changes don't spam the Worker
 }
 
-function getUsedTxns(){ try{ return JSON.parse(localStorage.getItem('topsport_used_txns')||'[]'); }catch(e){ return []; } }
-function markTxnUsed(url){ const used=getUsedTxns(); used.push(url.trim().toLowerCase()); localStorage.setItem('topsport_used_txns',JSON.stringify(used)); }
+function getUsedTxns(){ try{ return JSON.parse(localStorage.getItem('mex_used_txns')||'[]'); }catch(e){ return []; } }
+function markTxnUsed(url){ const used=getUsedTxns(); used.push(url.trim().toLowerCase()); localStorage.setItem('mex_used_txns',JSON.stringify(used)); }
 function isTxnUsed(url){ return getUsedTxns().includes(url.trim().toLowerCase()); }
 
 function validateTxnUrl(url,method){
@@ -1289,7 +1289,7 @@ function showTxnError(msg,orderTotal,sentAmount){
 
 function cancelTxnProof(){ _pendingOrder=null; showCheckout(); }
 
-let orderHistory=JSON.parse(localStorage.getItem('topsport_orders')||'[]');
+let orderHistory=JSON.parse(localStorage.getItem('mex_orders')||'[]');
 let curProduct=null, selSize="M", selQty=1, curShipping=null;
 let selectedPayment='cbe';
 let shopState={leagueId:'all',teamId:null,kitFilter:'all'};
@@ -1302,10 +1302,10 @@ let modalCtx=null;
 // arrive after (and overwrite) the good final one.
 let _pushChain=Promise.resolve();
 function save(){
-  localStorage.setItem('topsport_cfg',JSON.stringify(cfg));
+  localStorage.setItem('mex_cfg',JSON.stringify(cfg));
   if(hasCloudSync()) _pushChain=_pushChain.then(()=>pushCloudConfig(false)).catch(()=>{});
 }
-function saveOrders(){ localStorage.setItem('topsport_orders',JSON.stringify(orderHistory)); }
+function saveOrders(){ localStorage.setItem('mex_orders',JSON.stringify(orderHistory)); }
 function fmt(n){ return cfg.currencyPos==='after'?n.toLocaleString()+' '+cfg.currency:cfg.currency+' '+n.toLocaleString(); }
 function isOwner(){ if(!tgUser) return false; return OWNER_IDS.includes(String(tgUser.id)); }
 function isAdmin(){ if(!tgUser) return false; if(isOwner()) return true; return (cfg.adminIds||[]).map(String).includes(String(tgUser.id)); }
@@ -1318,7 +1318,7 @@ async function initLogin(){
   const li=document.getElementById('login-logo-inner');
   if(cfg.logoUrl){ li.innerHTML=`<img src="${cfg.logoUrl}" onerror="this.parentNode.textContent='${cfg.logoEmoji||'⚽'}'">` }
   else { li.textContent=cfg.logoEmoji||'⚽'; }
-  document.getElementById('login-brand-name').innerHTML=`${cfg.brandName1||'Top'}<span>${cfg.brandName2||'Sport'}</span>`;
+  document.getElementById('login-brand-name').innerHTML=`${cfg.brandName1||'MEX'}<span>${cfg.brandName2||'Sports Wear'}</span>`;
   document.getElementById('login-tagline').textContent=cfg.storeSub||'Official Football Jerseys';
   const remote=await fetchCloudConfig();
   // Only accept the cloud copy if it's actually newer than what we already have locally.
@@ -1332,7 +1332,7 @@ async function initLogin(){
   function tryTelegram(){
     try{
       const tg=window.Telegram?.WebApp;
-      if(tg){ tg.ready(); try{tg.expand();}catch(e){} try{tg.setHeaderColor('#0a0a0a');tg.setBackgroundColor('#0a0a0a');}catch(e){} const u=tg.initDataUnsafe?.user; if(u&&u.id){ tgUser=u; tgInitData=tg.initData||null; const saved=localStorage.getItem('topsport_user_id'); if(saved&&saved===String(u.id)){ document.getElementById('login-screen').style.display='none'; bootApp(); } else { showTgUser(u); } return true; } }
+      if(tg){ tg.ready(); try{tg.expand();}catch(e){} try{tg.setHeaderColor('#140607');tg.setBackgroundColor('#140607');}catch(e){} const u=tg.initDataUnsafe?.user; if(u&&u.id){ tgUser=u; tgInitData=tg.initData||null; const saved=localStorage.getItem('mex_user_id'); if(saved&&saved===String(u.id)){ document.getElementById('login-screen').style.display='none'; bootApp(); } else { showTgUser(u); } return true; } }
     }catch(e){}
     return false;
   }
@@ -1359,7 +1359,7 @@ function enterPreviewMode(){
   setTimeout(()=>{ s.style.display='none'; bootApp(); },300);
 }
 function enterApp(){
-  if(tgUser) localStorage.setItem('topsport_user_id',String(tgUser.id));
+  if(tgUser) localStorage.setItem('mex_user_id',String(tgUser.id));
   const s=document.getElementById('login-screen'); s.style.transition='opacity .35s ease,transform .35s ease'; s.style.opacity='0'; s.style.transform='scale(.97)';
   setTimeout(()=>{ s.style.display='none'; bootApp(); },350);
 }
@@ -1372,8 +1372,8 @@ function bootApp(){
   curShipping=cfg.shipping[0];
   document.getElementById('page-shop').classList.add('app-revealed');
   updateNavProfileIcon();
-  const alreadyWelcomed=tgUser&&localStorage.getItem('topsport_welcomed_'+tgUser.id);
-  if(tgUser&&!alreadyWelcomed&&!String(tgUser.id).startsWith('guest_')){ showToast(`Welcome, ${tgUser.first_name}! 👋`); localStorage.setItem('topsport_welcomed_'+tgUser.id,'1'); }
+  const alreadyWelcomed=tgUser&&localStorage.getItem('mex_welcomed_'+tgUser.id);
+  if(tgUser&&!alreadyWelcomed&&!String(tgUser.id).startsWith('guest_')){ showToast(`Welcome, ${tgUser.first_name}! 👋`); localStorage.setItem('mex_welcomed_'+tgUser.id,'1'); }
   let tapCount=0,tapTimer;
   document.querySelector('.logo').addEventListener('click',()=>{ tapCount++; clearTimeout(tapTimer); tapTimer=setTimeout(()=>tapCount=0,700); if(tapCount>=5){ tapCount=0; if(isAdmin()) showAdminDirect(); } });
   startLiveSyncPolling();
@@ -1528,7 +1528,7 @@ function syncColorFromRgb(key){
 
 const PRESETS={
   dark:     {'--accent':'#f5a623','--bg':'#0a0a0a','--card':'#1a1a1a','--dark':'#111111','--white':'#ffffff','--border':'#2a2a2a','--gray':'#888888'},
-  topsport: {'--accent':'#e0b83c','--bg':'#141414','--card':'#1e1e1e','--dark':'#0d0d0d','--white':'#ffffff','--border':'#2c2c2c','--gray':'#999999'},
+  mex:      {'--accent':'#e3101b','--bg':'#140607','--card':'#220b0d','--dark':'#0c0405','--white':'#ffffff','--border':'#3a1519','--gray':'#b59a9c'},
   legacy:  {'--accent':'#1a56db','--bg':'#080d1a','--card':'#0f1829','--dark':'#0a1020','--white':'#ffffff','--border':'#1e2d4a','--gray':'#6b82a0'},
   fire:    {'--accent':'#f97316','--bg':'#0d0500','--card':'#1a0a00','--dark':'#110600','--white':'#ffffff','--border':'#2a1200','--gray':'#886644'},
   emerald: {'--accent':'#10b981','--bg':'#021a0e','--card':'#0a2a1a','--dark':'#061508','--white':'#ffffff','--border':'#0f3020','--gray':'#4a8870'},
@@ -1547,8 +1547,8 @@ function renderHeader(){
   const el=document.getElementById('hdr-logo-img');
   if(cfg.logoUrl){ el.className='logo-img'; el.outerHTML=`<img id="hdr-logo-img" class="logo-img" src="${cfg.logoUrl}" onerror="this.outerHTML='<div id=hdr-logo-img class=logo-emoji>${cfg.logoEmoji||'⚽'}</div>'">`; }
   else { el.className='logo-emoji'; el.textContent=cfg.logoEmoji||'⚽'; }
-  document.getElementById('hdr-brand-name').innerHTML=`${cfg.brandName1||'Top'}<span>${cfg.brandName2||'Sport'}</span>`;
-  document.getElementById('hdr-brand-sub').textContent=cfg.storeSub||'Sport';
+  document.getElementById('hdr-brand-name').innerHTML=`${cfg.brandName1||'MEX'}<span>${cfg.brandName2||'Sports Wear'}</span>`;
+  document.getElementById('hdr-brand-sub').textContent=cfg.storeSub||'Sports Wear';
 }
 function renderHero(){
   const h=cfg.hero;
@@ -2100,8 +2100,8 @@ function completeOrder(o){
 
 function shareReceipt(){
   const oid=document.querySelector('.receipt-num')?.textContent||'';
-  const text=`🧾 My Top Sport Order ${oid}\nShop at ${cfg.storeName}`;
-  if(navigator.share){ navigator.share({title:'Top Sport Receipt',text}).catch(()=>{}); }
+  const text=`🧾 My MEX Sports Wear Order ${oid}\nShop at ${cfg.storeName}`;
+  if(navigator.share){ navigator.share({title:'MEX Sports Wear Receipt',text}).catch(()=>{}); }
   else if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=>showToast('Receipt info copied!')); }
   else { showToast('Use the Share button in your browser'); }
 }
@@ -2333,7 +2333,7 @@ async function addAdmin(){
   if((cfg.adminIds||[]).includes(val)){ showToast('Already an admin'); return; }
   if(!cfg.adminIds) cfg.adminIds=[];
   cfg.adminIds.push(val);
-  localStorage.setItem('topsport_cfg',JSON.stringify(cfg)); // save locally first so the UI updates immediately
+  localStorage.setItem('mex_cfg',JSON.stringify(cfg)); // save locally first so the UI updates immediately
   if(inp) inp.value=''; renderManageAdmins();
   showToast('Admin added — syncing… ☁️');
   const synced=await pushCloudConfig(false);
@@ -2343,7 +2343,7 @@ async function addAdmin(){
 }
 async function removeAdmin(id){
   cfg.adminIds=(cfg.adminIds||[]).filter(x=>x!==id);
-  localStorage.setItem('topsport_cfg',JSON.stringify(cfg));
+  localStorage.setItem('mex_cfg',JSON.stringify(cfg));
   renderManageAdmins();
   showToast('Admin removed — syncing… ☁️');
   const synced=await pushCloudConfig(false);
