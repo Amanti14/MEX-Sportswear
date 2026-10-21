@@ -317,7 +317,7 @@
             <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Quick Presets</div>
             <div style="display:flex;flex-wrap:wrap;gap:7px">
               <button onclick="applyPreset('dark')"    style="background:#111;border:1px solid #333;color:#fff;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚫ Dark</button>
-              <button onclick="applyPreset('mex')" style="background:#111;border:1px solid #e3101b;color:#e3101b;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚽ MEX</button>
+              <button onclick="applyPreset('mex')" style="background:#111;border:1px solid #e30613;color:#e30613;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚽ MEX</button>
               <button onclick="applyPreset('legacy')"  style="background:#080d1a;border:1px solid #1a56db;color:#1a56db;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">⚡ Legacy</button>
               <button onclick="applyPreset('fire')"    style="background:#0d0500;border:1px solid #f97316;color:#f97316;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">🔥 Fire</button>
               <button onclick="applyPreset('emerald')" style="background:#021a0e;border:1px solid #10b981;color:#10b981;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer">💚 Emerald</button>
@@ -342,7 +342,7 @@
           <div class="adm-field"><label>Headline Line 1</label><input id="padm-hero-h1a" type="text"></div>
           <div class="adm-field"><label>Headline Line 2 (accent)</label><input id="padm-hero-h1b" type="text"></div>
           <div class="adm-field"><label>Subtitle</label><input id="padm-hero-sub" type="text"></div>
-          <div class="adm-field"><label>Hero Image URL</label><input id="padm-hero-img" type="url" placeholder="https://..."></div>
+          <div class="adm-field"><label>Hero Image URL</label><input id="padm-hero-img" type="text" placeholder="https://... or banner.jpg"></div>
           <button class="btn-save" onclick="padmSaveHero()" style="width:100%">Save Hero</button>
         </div>
         <!-- SYNC TAB -->
@@ -485,8 +485,8 @@ const DEFAULT_CONFIG = {
   about:"Ethiopia's premier destination for authentic football kits. Official jerseys from Premier League, La Liga, Bundesliga, Ligue 1, Serie A, Champions League and National Teams.",
   currency:"ETB",currencyPos:"before",
   payment:{ cbeNum:"1000123456789", cbeName:"MEX Sports Wear", telebirrNum:"+251 911 234 567", telebirrName:"MEX Sports Wear" },
-  hero:{tag:"⚡ New Season 2024/25",h1a:"Official",h1b:"Football Jerseys",sub:"Authentic kits from top leagues worldwide",imgUrl:""},
-  theme:{"--accent":"#e3101b","--bg":"#140607","--card":"#220b0d","--dark":"#0c0405","--white":"#ffffff","--border":"#3a1519","--accent2":"#ffffff"},
+  hero:{tag:"⚡ New Season 2024/25",h1a:"Official",h1b:"Football Jerseys",sub:"Authentic kits from top leagues worldwide",imgUrl:"banner.jpg"},
+  theme:{"--accent":"#e30613","--bg":"#140506","--card":"#240b0e","--dark":"#4a0509","--white":"#ffffff","--border":"#4a1418","--gray":"#c9a6a8","--accent2":"#ffffff"},
   sizes:["XS","S","M","L","XL","XXL"],
   customFee:150,
   deletedProductIds:[],
@@ -1332,7 +1332,7 @@ async function initLogin(){
   function tryTelegram(){
     try{
       const tg=window.Telegram?.WebApp;
-      if(tg){ tg.ready(); try{tg.expand();}catch(e){} try{tg.setHeaderColor('#140607');tg.setBackgroundColor('#140607');}catch(e){} const u=tg.initDataUnsafe?.user; if(u&&u.id){ tgUser=u; tgInitData=tg.initData||null; const saved=localStorage.getItem('mex_user_id'); if(saved&&saved===String(u.id)){ document.getElementById('login-screen').style.display='none'; bootApp(); } else { showTgUser(u); } return true; } }
+      if(tg){ tg.ready(); try{tg.expand();}catch(e){} try{tg.setHeaderColor('#4a0509');tg.setBackgroundColor('#140506');}catch(e){} const u=tg.initDataUnsafe?.user; if(u&&u.id){ tgUser=u; tgInitData=tg.initData||null; const saved=localStorage.getItem('mex_user_id'); if(saved&&saved===String(u.id)){ document.getElementById('login-screen').style.display='none'; bootApp(); } else { showTgUser(u); } return true; } }
     }catch(e){}
     return false;
   }
@@ -1528,7 +1528,7 @@ function syncColorFromRgb(key){
 
 const PRESETS={
   dark:     {'--accent':'#f5a623','--bg':'#0a0a0a','--card':'#1a1a1a','--dark':'#111111','--white':'#ffffff','--border':'#2a2a2a','--gray':'#888888'},
-  mex:      {'--accent':'#e3101b','--bg':'#140607','--card':'#220b0d','--dark':'#0c0405','--white':'#ffffff','--border':'#3a1519','--gray':'#b59a9c'},
+  mex:      {'--accent':'#e30613','--bg':'#140506','--card':'#240b0e','--dark':'#4a0509','--white':'#ffffff','--border':'#4a1418','--gray':'#c9a6a8'},
   legacy:  {'--accent':'#1a56db','--bg':'#080d1a','--card':'#0f1829','--dark':'#0a1020','--white':'#ffffff','--border':'#1e2d4a','--gray':'#6b82a0'},
   fire:    {'--accent':'#f97316','--bg':'#0d0500','--card':'#1a0a00','--dark':'#110600','--white':'#ffffff','--border':'#2a1200','--gray':'#886644'},
   emerald: {'--accent':'#10b981','--bg':'#021a0e','--card':'#0a2a1a','--dark':'#061508','--white':'#ffffff','--border':'#0f3020','--gray':'#4a8870'},
@@ -1555,7 +1555,16 @@ function renderHero(){
   document.getElementById('hero-tag').textContent=h.tag||'';
   document.getElementById('hero-title').innerHTML=`${h.h1a||'Official'}<br><span>${h.h1b||'Football Jerseys'}</span>`;
   document.getElementById('hero-subtitle').textContent=h.sub||'';
-  document.getElementById('hero-img-container').innerHTML=h.imgUrl?`<img class="hero-img" src="${h.imgUrl}" onerror="this.style.display='none'">`:'';
+  // Full-width banner: image becomes the hero background (cover) with a dark left gradient so text stays readable
+  const hs=document.getElementById('hero-section');
+  document.getElementById('hero-img-container').innerHTML='';
+  if(h.imgUrl){
+    const safe=String(h.imgUrl).replace(/["')\\]/g,'');
+    const probe=new Image();
+    probe.onload=()=>{ hs.classList.add('hero-has-img'); hs.style.backgroundSize='cover'; hs.style.backgroundPosition='right center'; hs.style.backgroundRepeat='no-repeat'; hs.style.minHeight='340px'; hs.style.backgroundImage='linear-gradient(90deg,rgba(20,5,6,.92) 0%,rgba(20,5,6,.70) 45%,rgba(20,5,6,.15) 100%),url("'+safe+'")'; };
+    probe.onerror=()=>{ hs.classList.remove('hero-has-img'); hs.style.backgroundImage=''; hs.style.minHeight=''; };
+    probe.src=safe;
+  } else { hs.classList.remove('hero-has-img'); hs.style.backgroundImage=''; hs.style.minHeight=''; }
 }
 
 function kitIcon(t){ return {'Home Kit':'🏠','Away Kit':'✈️','Third Kit':'3️⃣','Goalkeeper':'🧤','Training Top':'💪','Shorts':'👖','UCL Edition':'🏆','Local':'🇪🇹'}[t]||'⚽'; }
